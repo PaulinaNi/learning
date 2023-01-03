@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Sign In</title>
 </head>
+
 <body>
  <a href="index.html">Go Back</a>
  <main>
   <h1>Sign In</h1>
   <p>Welcome to our Workout App, we will need few informations to create first workout plan for you.</p>
-  <form>
-   
+  <form action="/formSubmit">
+   <p>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+   </p>
+   <p>
+    <label for="password">Password (6 characters minimum):</label>
+    <input type="password" id="password" name="password" minlength="6" required>
+   </p>
+   <p>
+    <fileset>
+     <legend>What time do you like to workout?</legend>
+     <p>
+      <input type="radio" id="morning" name="time" value="morning">
+      <label for="morning">In the morning</label>
+     </p>
+     <p>
+      <input type="radio" id="afternoon" name="time" value="afternoon">
+      <label for="afternoon">In the afternoon</label>
+     </p>
+     <p>
+      <input type="radio" id="evening" name="time" value="evening">
+      <label for="evening">In the evening</label>
+     </p>
+    </fileset>
+   </p>
+   <p>
+    <label for="frequency">How many time would you like to do workout during week?</label>
+    <input type="number" id="frequency" name="frequency" placeholder="Input number" required>
+   </p>
+   <p>
+    <input type="checkbox" name="agreeToPrivacyPolicy" id="agreeToPrivacyPolicy" checked required>
+    <label for="agreeToPrivacyPolicy">I agree to the Privacy Policy</label>
+   </p>
+
+   <fieldset>
+    <legend>Would you like me to call you to discus you training plan?</legend>
+    <input type="radio" id="no" name="acceptCall" value="no">
+    <label for="no">No</label>
+    <input type="radio" id="yes" name="acceptCall" value="yes" >
+    <label for="yes">Yes</label> 
+   </fieldset>
+   <button>Submit</button>
   </form>
  </main>
- 
+
 </body>
+
 </html>
