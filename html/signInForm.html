@@ -52,9 +52,22 @@
     <legend>Would you like me to call you to discus you training plan?</legend>
     <input type="radio" id="no" name="acceptCall" value="no">
     <label for="no">No</label>
-    <input type="radio" id="yes" name="acceptCall" value="yes" >
-    <label for="yes">Yes</label> 
+    <input type="radio" id="yes" name="acceptCall" value="yes">
+    <label for="yes">Yes</label>
    </fieldset>
+   <p>
+    <label for="focusOn">What part of your body would you like to focus first?</label>
+    <select name="bodyPart" id="focusOn" required>
+     <option value="">Choose one option</option>
+     <option value="legs">Legs</option>
+     <option value="shoulders">Shoulders</option>
+     <option value="chest">Chest</option>
+    </select>
+   </p>
+   <p>
+    <label for="additionalInfo">Any special request?</label>
+    <textarea name="additionalInfo" id="additionalInfo" cols="30" rows="2"></textarea>
+   </p>
    <button>Submit</button>
   </form>
  </main>
