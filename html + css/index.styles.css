@@ -1,0 +1,12 @@
+* {
+ box-sizing: border-box;
+ background-color: rgb(107, 107, 141);
+}
+
+h1 {
+ color: rgb(163, 145, 163);
+}
+
+a {
+ color: white;
+}
