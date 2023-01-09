@@ -2,16 +2,26 @@
  box-sizing: border-box;
 }
 
-body>a:first-of-type {
+/* direct child selectors - use > between elements */
+body>a {
  display: block;
  color: rgb(116, 201, 153);
  text-decoration: underline wavy rgb(11, 85, 11);
- margin-bottom: 1rem;
+ margin: 1rem 0rem;
 }
 
 body {
+ margin: 0;
  background-color: #6D6875;
- color: #E5989B;
+}
+
+section {
+ padding: 1rem 0.5rem;
+}
+
+/* use of pseudo classes */
+.post:nth-of-type(2n) {
+ background-color: #9690a0;
 }
 
 h1 {
@@ -42,11 +52,6 @@ button {
  border: solid #B5838D;
 }
 
-span {
- color: #fde1d2;
- font-size: 0.75rem;
-}
-
 .postLabels {
  border: solid 0.1rem #FFCDB2;
  border-radius: 0.5rem;
@@ -62,6 +67,29 @@ input {
  border-radius: 0.5rem;
  color: white;
 }
-input::placeholder{
+
+span {
+ font-size: 0.75rem;
+}
+
+/* select multiple - use , between elements 
+::placeholder - pseudo elements*/
+span,
+input::placeholder {
  color: #fde1d2;
+}
+
+/* descendant selectors- when you want to select element nested in other element - use empty space between element*/
+li a {
+ color: rgb(245, 209, 162)
+}
+
+/* you can nest more than one element 
+footer nav ul li a{
+ color:red;
+} */
+
+/* you can use not only elements, but ids and classes also */
+.post h2 {
+ font-style: italic;
 }
