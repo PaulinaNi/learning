@@ -46,3 +46,20 @@ button {
     border-radius: 1rem;
     padding: 0.5rem 1rem;
 }
+
+
+/* Display */
+
+ul{
+    padding-top: 2rem;
+    border: 0.2rem solid #344E41;
+}
+
+.gen8 {
+    /* difference between inline(ignores width/height) and inline-block */
+    /* display: inline; */
+    display: inline-block;
+    background-color: #184E77;
+    color: #ffffff;
+    padding: 1rem;
+}
