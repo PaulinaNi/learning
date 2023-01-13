@@ -1,0 +1,51 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ background-color: azure;
+}
+
+div {
+ width: 100px;
+ height: 100px;
+ background-color: #3d405b;
+ border: 2px solid black;
+ margin: 10px;
+ display: inline-block;
+}
+
+#middle {
+ background-color: #81b29a;
+}
+
+#static #middle {
+ position: static;
+ top: 100px;
+}
+
+/* not removed from flow of the document, but can be position relative to space in document */
+#relative #middle {
+ position: relative;
+ top: 50px;
+ left: 50px;
+}
+
+/* parent element need to have position property different that static and the child element with position: absolute will be removed from the flow of the document and position relative to the parent element, if the parent element does not have a position property it will look for the closest ancestor with position property different than static*/
+#absolute {
+ position: relative;
+}
+
+#absolute #middle {
+ position: absolute;
+ margin: 0;
+ top: 40px;
+ left: 1px;
+}
+
+/* good for fixing navbar to top of webpage */
+#fixed #middle {
+ position: fixed;
+ top: 0;
+ left: 400px;
+}
