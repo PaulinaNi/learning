@@ -1,0 +1,25 @@
+* {
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body{
+padding: 1rem;
+}
+
+nav {
+ width: 30%;
+ font-weight: 700;
+ border-bottom: 0.05rem solid rgb(189, 189, 189);
+ padding-bottom: 1rem;
+ margin: 0 0 1rem calc(10%/6);
+}
+section{
+ display: flex;
+ flex-wrap: wrap;
+ align-content: center;
+}
+img{
+ width: 30%;
+ margin: calc(10%/6);
+}
