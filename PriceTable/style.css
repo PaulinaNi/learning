@@ -1,0 +1,48 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: 'Open Sans', sans-serif;
+ background-color: rgb(129, 194, 238);
+ height: 100vh;
+ justify-content: center;
+}
+
+.pricing-table, body{
+ display: flex;
+ align-items: center;
+}
+
+.pricing-table {
+ background-color: #fff;
+ border-radius: 1rem;
+ width: 70vw;
+ padding: 1rem 0;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+
+.pricing-plan{
+ color:rgb(129, 194, 238);
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: 700;
+ padding: 1rem;
+}
+
+.pricing-header{
+ color:rgb(161, 174, 182);
+}
+
+.pricing-features{
+ list-style: none;
+}
+
+.pricing-features-item{
+ padding: 1rem 0;
+ border-top: 0.1rem solid rgb(161, 174, 182);
+}
+.pricing-features-item:nth-of-type(2){
+ border-bottom: 0.1rem solid rgb(161, 174, 182);
+}
