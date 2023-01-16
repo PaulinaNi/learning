@@ -5,8 +5,9 @@
 body {
  font-family: 'Open Sans', sans-serif;
  background-color: rgb(129, 194, 238);
- height: 100vh;
+ /* height: 100vh; */
  justify-content: center;
+ font-size: 0.8rem;
 }
 
 .pricing-table,
@@ -29,22 +30,66 @@ body {
  text-transform: uppercase;
  text-align: center;
  font-weight: 700;
- padding: 1rem;
+ padding: 1.5rem;
+}
+
+.pricing-plan img {
+ width: 80%;
 }
 
 .pricing-header {
- color: rgb(161, 174, 182);
+ color: rgb(137, 140, 143);
+ padding-bottom: 1rem;
 }
 
 .pricing-features {
  list-style: none;
+ padding: 0;
+ margin: 0;
 }
 
 .pricing-features-item {
  padding: 1rem 0;
- border-top: 0.1rem solid rgb(161, 174, 182);
+ border-top: 0.1rem solid rgb(232, 237, 240);
 }
 
 .pricing-features-item:nth-of-type(2) {
- border-bottom: 0.1rem solid rgb(161, 174, 182);
+ border-bottom: 0.1rem solid rgb(232, 237, 240);
+}
+
+.pricing-price {
+ display: block;
+ font-size: 2rem;
+ font-weight: 700;
+ padding: 1rem 0;
+ color: rgb(100, 151, 185);
+}
+
+.pricing-button {
+ display: inline-block;
+ text-decoration: none;
+ color: rgb(129, 194, 238);
+ padding: 0.5rem 1rem;
+ border: 0.1rem solid rgb(129, 194, 238);
+ border-radius: 1em;
+}
+
+.is-featured {
+ background-color: rgb(129, 194, 238);
+ color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+ body {
+  height: 100vh;
+ }
+
+ .pricing-plan:nth-of-type(2) {
+  border-left: 0.1rem solid rgb(232, 237, 240);
+  border-right: 0.1rem solid rgb(232, 237, 240);
+ }
+
+ .pricing-table {
+  flex-wrap: nowrap;
+ }
 }
