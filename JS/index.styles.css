@@ -1,3 +1,50 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+}
+
 .redcolor {
  color: red
+}
+
+/* Navbar styles */
+
+nav {
+ background-color: aquamarine;
+ padding: 0.5rem;
+}
+
+.brandLogo {
+ font-size: 2rem;
+}
+p{
+ margin:0;
+}
+
+/* NavBar Mobile styles */
+
+.hidden {
+ display: none;
+}
+
+.navbarMobile {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+ul {
+ padding: 0;
+ list-style: none;
+}
+
+.hamburgerMenu {
+ display: block;
+ height: 0.25rem;
+ width: 3rem;
+ background-color: blue;
+ margin: 0.25rem 0;
 }

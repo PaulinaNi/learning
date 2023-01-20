@@ -1,6 +1,17 @@
 // first hallo word :P 
 // console.log("Hello World")
 
+//NavBar 
+
+const mobileMenuList = document.getElementById('mobileMenuList')
+const hamburgerMenuBtn = document.getElementById('hamburgerMenuBtn')
+
+function hamburgerMenuHandler() {
+ mobileMenuList.classList.toggle('hidden')
+}
+
+hamburgerMenuBtn.addEventListener('click', hamburgerMenuHandler)
+
 //changing color of H1 on click
 const welcomeBtn = document.getElementById("welcome")
 const header = document.querySelector("h1")
