@@ -30,6 +30,10 @@ p{
  display: none;
 }
 
+.opacity{
+opacity: 0;
+}
+
 .navbarMobile {
  display: flex;
  justify-content: space-between;
@@ -47,4 +51,15 @@ ul {
  width: 3rem;
  background-color: blue;
  margin: 0.25rem 0;
+}
+
+.topAnimation{
+    transform: translateX(-0.3rem) rotate(-45deg);
+    transform-origin: top right;
+}
+
+/* rotate(45deg) */
+.bottomAnimation{
+    transform: translateY(1rem) translateX(-0.3rem) rotate(45deg);
+    transform-origin: bottom right;
 }

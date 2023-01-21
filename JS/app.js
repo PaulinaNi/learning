@@ -1,23 +1,29 @@
 // first hallo word :P 
-// console.log("Hello World")
+// console.log('Hello World')
 
 //NavBar 
 
 const mobileMenuList = document.getElementById('mobileMenuList')
 const hamburgerMenuBtn = document.getElementById('hamburgerMenuBtn')
+const topSpan = document.getElementById('topSpan')
+const middle = document.getElementById('middle')
+const bottom = document.getElementById('bottom')
 
 function hamburgerMenuHandler() {
  mobileMenuList.classList.toggle('hidden')
+ middle.classList.toggle('opacity')
+ topSpan.classList.toggle('topAnimation')
+ bottom.classList.toggle('bottomAnimation')
 }
 
 hamburgerMenuBtn.addEventListener('click', hamburgerMenuHandler)
 
 //changing color of H1 on click
-const welcomeBtn = document.getElementById("welcome")
-const header = document.querySelector("h1")
+const welcomeBtn = document.getElementById('welcome')
+const header = document.querySelector('h1')
 
 function changeColor() {
- header.classList.toggle("redcolor")
+ header.classList.toggle('redcolor')
 }
 welcomeBtn.addEventListener('click', changeColor)
 
