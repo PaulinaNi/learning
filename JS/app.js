@@ -45,6 +45,18 @@ function fizzBuzz(lastNum) {
 
 // fizzBuzz(30);
 
+//ask user for password, need to have 6 characters and can't include space
+
+// const password = prompt('please type your password')
+
+// if (password.length < 6){
+//     console.log('Your password must contain at least 6 characters')
+// } else if (password.includes(' ')){
+//     console.log("Your password can't include spaces")
+// } else {
+//     console.log("You're in")
+// }
+
 // Excercise 
 //Given a string s consisting of words and spaces, return the length of the last word in the string.
 
@@ -62,3 +74,97 @@ const lastWordLength = (str) => {
 }
 
 // console.log(lastWordLength(' Wait for me, please'))
+
+// Write a JavaScript function to parameterize a string. Go to the editor
+// Test Data :
+// console.log(string_parameterize("Robin Singh from USA."));
+// "robin-singh-from-usa"
+
+const parameterizeString = (str) => {
+    const trimedStr = str.trim()
+    let newString = ''
+    for (let i = 0; i < trimedStr.length; i++) {
+        if (trimedStr[i] === ' ') {
+            newString += '-'
+        } else if (trimedStr[i] === '.') {
+
+        } else {
+            newString += trimedStr[i].toLowerCase()
+        }
+    }
+    console.log(newString)
+}
+// parameterizeString("Robin Singh from USA.")
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+function breakCamelCase(string) {
+    let addSpace = ''
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toUpperCase() && string[i] !== string[i].toLowerCase()) {
+            addSpace = `${addSpace} ${string[i]}`
+        } else {
+            addSpace += string[i]
+        }
+    }
+    return addSpace
+}
+
+// console.log(breakCamelCase("camelCasing"))
+
+// Story
+// Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+
+// Task
+// Write a function that returns both the minimum and maximum number of the given list/array.
+
+// Examples (Input --> Output)
+// [1,2,3,4,5] --> [1,5]
+// [2334454,5] --> [5,2334454]
+// [1]         --> [1,1]
+// Remarks
+// All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
+
+function minMax(arr) {
+    return [Math.min(...arr), Math.max(...arr)]
+}
+
+// console.log(minMax([2,4,7]))
+
+
+function getSum(a, b) {
+    let sum = 0
+    if (a < b) {
+        for (let i = a; i <= b; i++) {
+            sum += i
+        }
+    } else if (b < a) {
+        for (let i = b; i <= a; i++) {
+            sum += i
+        }
+    } else {
+        sum = b
+    }
+    return sum
+}
+
+// console.log(getSum(0, -1))
+
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+// Return your answer as a number.
+
+function sumMix(x) {
+    //you can use unary plus operator to converting string into number
+    return x.reduce((accumulator, currentValue) => +accumulator + +currentValue)
+
+    // return x.map(e => parseInt(e)).reduce((accumulator, currentValue) => accumulator + currentValue)
+}
+
+
+// console.log(sumMix([9, 3, '7', '3']))
