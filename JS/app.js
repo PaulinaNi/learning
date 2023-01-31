@@ -200,3 +200,48 @@ function DNAStrand(dna) {
 }
 
 // console.log(DNAStrand("AAAA"))
+
+// Let's implement the zipObject function that enables such results
+
+// zipObject(['fred', 'barney'], [30, 40])
+// => { 'fred': 30, 'barney': 40 }
+
+// zipObject([['fred', 30], ['barney', 40]])
+// => { 'fred': 30, 'barney': 40 }
+// The zipObject creates an object composed from arrays of keys and values. It is provided with either a single two dimensional array, i.e. [[key1, value1], [key2, value2]] or with two arrays, one of keys and one of corresponding values.
+
+// If only keys are given, then set the values to undefined.
+
+// zipObject(['fred', 'barney'])
+// { fred: undefined, barney: undefined }
+// If neither keys nor values are specified, then return {}
+
+// zipObject()
+// {}
+
+function zipObject(keys, values) {
+    const scores = {}
+    if (!keys && !values) {
+        return {}
+    } else if (!values) {
+        if (keys.filter(Array.isArray).length > 0) {
+            for (let i = 0; i < keys.length; i++) {
+                scores[keys[i][0]] = keys[i][1]
+            }
+            return scores
+        } else if (keys.filter(Array.isArray).length === 0) {
+            for (let i = 0; i < keys.length; i++) {
+                scores[keys[i]] = undefined
+            }
+            return scores
+        }
+    } else {
+        for (let i = 0; i < keys.length; i++) {
+            scores[keys[i]] = values[i]
+        } return scores
+    }
+}
+// console.log(zipObject(['fred', 'barney']))
+// console.log(zipObject([['fred', 30], ['barney', 40], ['barney2', 80]]))
+// console.log(zipObject(['fred', 'barney'], [30, 40]))
+// console.log(zipObject())
