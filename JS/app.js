@@ -245,3 +245,37 @@ function zipObject(keys, values) {
 // console.log(zipObject([['fred', 30], ['barney', 40], ['barney2', 80]]))
 // console.log(zipObject(['fred', 'barney'], [30, 40]))
 // console.log(zipObject())
+
+//guessing game 
+
+const guessingGame = () => {
+    let times = 1
+    const range = prompt('Please input range for the game.')
+    const luckyNumber = Math.ceil(Math.random() * range).toString()
+    let playerNumber = prompt('Guess the number')
+
+    while (playerNumber !== luckyNumber) {
+        times++
+        if (playerNumber < luckyNumber) {
+            playerNumber = prompt('Too low')
+        } else if (playerNumber > luckyNumber) {
+            playerNumber = prompt('Too high')
+        } else if (playerNumber === 'q') {
+            break
+        } else {
+            console.log('something went wrong')
+        }
+    }
+    console.log(`You win, the lucky number is ${luckyNumber}. It took you ${times} guesses`)
+}
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+const validatePIN = (pin) => pin.split('').every(e => /^[0-9]/.test(e)) ? pin.length === 4 || pin.length === 6 : false
