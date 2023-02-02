@@ -279,3 +279,4 @@ const guessingGame = () => {
 // "a234"   -->  false
 
 const validatePIN = (pin) => pin.split('').every(e => /^[0-9]/.test(e)) ? pin.length === 4 || pin.length === 6 : false
+
