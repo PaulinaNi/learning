@@ -1,0 +1,9 @@
+* {
+ box-sizing: border-box;
+}
+
+.deleteBTN {
+ color: red;
+ padding-left: 1rem;
+ cursor: pointer;
+}
