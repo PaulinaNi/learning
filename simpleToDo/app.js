@@ -14,18 +14,18 @@ const removeAllTasks = () => {
 
 //function which will add all task from task array to DOM
 const addTasksToDOM = (task, index) => {
- const taskLi = document.createElement('li')
- taskLi.textContent = task
+ const taskContainer = document.createElement('p')
+ taskContainer.textContent = task
 
  //add styles
- // taskLi.classList.add(`${index}`)
+ // taskContainer.classList.add(`${index}`)
 
  //add delete button
  const btn = createDeleteBTN(index)
- taskLi.append(btn)
+ taskContainer.append(btn)
 
  //appent task to DOM
- taskListUL.append(taskLi)
+ taskListUL.append(taskContainer)
 }
 
 //add all task to UL
@@ -35,7 +35,7 @@ const addTasksToUL = () => {
 
 //function to delete task
 const deleteTask = (index) => {
- //delete task
+ //delete task from array
  taskArray.splice(index, 1)
  //remove and add tasks again
  removeAllTasks()
@@ -47,7 +47,6 @@ const createDeleteBTN = (index) => {
  const deleteBTN = document.createElement('span')
  deleteBTN.textContent = 'Delete'
  deleteBTN.classList.add('deleteBTN')
- deleteBTN.id = `${index}`
  deleteBTN.addEventListener('click', () => deleteTask(index))
  return deleteBTN
 }
@@ -55,16 +54,12 @@ const createDeleteBTN = (index) => {
 
 //add task handler
 const addTask = () => {
-
  //push task to array with all tasks 
  taskArray.push(addTaskInput.value)
-
  //clean input
  addTaskInput.value = ''
-
- //remove all task from dom
+ //remove all task from dom add 
  removeAllTasks()
-
  //add all task to dom again with new task
  addTasksToUL()
 }
