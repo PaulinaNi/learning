@@ -323,3 +323,25 @@ function createPhoneNumber(numbers) {
 
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+const abbrevName = (name) => `${name.split(' ')[0][0].toUpperCase()}.${name.split(' ')[1][0].toUpperCase()}`
+
+// console.log(abbrevName("Evan Cole"))
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+
+const fakeBin = (x) => x.split('').map(num => parseInt(num)<5 ? 0 : 1).join('')
+
+// console.log(fakeBin('45385593107843568'))
