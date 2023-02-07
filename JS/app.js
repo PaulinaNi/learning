@@ -342,6 +342,28 @@ const abbrevName = (name) => `${name.split(' ')[0][0].toUpperCase()}.${name.spli
 // Note: input will never be an empty string
 
 
-const fakeBin = (x) => x.split('').map(num => parseInt(num)<5 ? 0 : 1).join('')
+const fakeBin = (x) => x.split('').map(num => parseInt(num) < 5 ? 0 : 1).join('')
 
 // console.log(fakeBin('45385593107843568'))
+
+// Return a function that will trim a string (the first argument given) if it is longer than the maximum string length (the second argument given). The result should also end with "..."
+
+// These dots at the end also add to the string length.
+
+// So in the above example, trim("Creating kata is fun", 14) should return "Creating ka..."
+
+// If the maximum string length is smaller than or equal to 3 characters, then the length of the dots is not added to the string length.
+
+// e.g. trim("He", 1) should return "H...", because 1 <= 3
+
+// If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or dots required.
+
+// e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
+
+function trim(str, size) {
+    const Arr = Array.from(str)
+    Arr.splice(size - 3)
+    return str.length >= size-2 ? `${Arr.join('')}...` : str;
+}
+
+console.log(trim("Creating kata is fun", 14))
