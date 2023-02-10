@@ -346,24 +346,22 @@ const fakeBin = (x) => x.split('').map(num => parseInt(num) < 5 ? 0 : 1).join(''
 
 // console.log(fakeBin('45385593107843568'))
 
-// Return a function that will trim a string (the first argument given) if it is longer than the maximum string length (the second argument given). The result should also end with "..."
+// Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
-// These dots at the end also add to the string length.
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
 
-// So in the above example, trim("Creating kata is fun", 14) should return "Creating ka..."
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
 
-// If the maximum string length is smaller than or equal to 3 characters, then the length of the dots is not added to the string length.
+// Examples: (Input --> Output)
 
-// e.g. trim("He", 1) should return "H...", because 1 <= 3
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
-// If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or dots required.
+// const number = array => {
+//     return array.length === 0 ? [] : array.map((str, index) => `${index + 1}: ${str}`)
+// }
 
-// e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
+const number = array => array.length === 0 ? [] : array.map((str, index) => `${index + 1}: ${str}`)
 
-function trim(str, size) {
-    const Arr = Array.from(str)
-    Arr.splice(size - 3)
-    return str.length >= size-2 ? `${Arr.join('')}...` : str;
-}
-
-console.log(trim("Creating kata is fun", 14))
+console.log(number([]))
+console.log(number(["a", "b", "c"]))
